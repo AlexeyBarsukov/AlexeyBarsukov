@@ -11,4 +11,7 @@ export const BtnRegistration = styled.button`
   font-weight: 600;
   font-family: Sans-serif;
   border-radius: 4px;
+  &:hover{
+    background-color: #CC221B;
+  }
 `

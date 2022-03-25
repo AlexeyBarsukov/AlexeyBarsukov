@@ -1,10 +1,8 @@
 import { BtnRegistration } from "./ButtonRegistration.styles."
 
 
-export const ButtonRegistration = () => {
+export const ButtonRegistration = ({ onClick }) => {
   return (
-    <>
-      <BtnRegistration>Войти</BtnRegistration>
-    </>
+    <BtnRegistration onClick={onClick}>Войти</BtnRegistration>
   )
 }
