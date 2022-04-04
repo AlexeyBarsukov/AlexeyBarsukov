@@ -1,16 +1,16 @@
 import './App.css'
 import React from 'react'
-import Header from './components/Header/Header'
+// import Header from './components/Header/Header'
 import Menu from './components/Menu/Menu';
-import Card1 from './components/PageOfCards/Card1/Card1';
+import { Movies } from './components/Movies/Movies';
 
 function App() {
   return (
     <div className='App'>
       <div className='AppContent'>
         <nav>
-          <Header />
-          <Menu />
+          <Movies />
+
         </nav>
       </div>
     </div>

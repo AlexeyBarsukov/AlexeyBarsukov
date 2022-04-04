@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { ButtonRegistration } from '../ButtonRegistration/ButtonRegistration';
-import { ModalContent, Modal, Entrance, Login, Password, Remember, BlockOfRegistation, SingRemember, BlockOfRemember } from './Modal.styles';
+import { ModalContent, Modal, Entrance, Login, Password, Remember, BlockOfRegistation, SingRemember, BlockOfRemember, ErrorMessage } from './Modal.styles';
 
 const ModalWindow = ({ onClick }) => {
   const disableModalClosing = (e) => e.stopPropagation();
@@ -12,7 +12,7 @@ const ModalWindow = ({ onClick }) => {
   const [loginIsEmpty, setLoginIsEmpty] = useState(false)
   const [passwordIsEmpty, setPasswordIsEmpty] = useState(false)
 
-  const [loginError, setLoginError] = useState('Введите логин');
+  const [loginError, setLoginError] = useState('Логин не существует!');
   const [passwordError, setPasswordError] = useState('Введите пароль')
 
 
@@ -29,9 +29,9 @@ const ModalWindow = ({ onClick }) => {
 
   const loginHandler = (e) => {
     setLogin(e.target.value)
-    const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const re = '';
     if (!re.test(String(e.target.value).toLowerCase())) {
-      setLoginError('Логин не существует')
+      setLoginError('Логин не существует!')
     } else {
       setLoginError('')
     }
@@ -54,13 +54,13 @@ const ModalWindow = ({ onClick }) => {
       <ModalContent onClick={disableModalClosing}>
         <Entrance>Вход</Entrance>
         <BlockOfRegistation>
-          {(loginIsEmpty && loginError) && <div style={{ color: 'red' }}>{loginError}</div>}
+          {(loginIsEmpty && loginError) && <ErrorMessage>{loginError}</ErrorMessage>}
           <Login onChange={e => loginHandler(e)} value={login} onBlur={e => blurHandler(e)} name='login' type="text" placeholder="Логин" />
-          {(passwordIsEmpty && passwordError) && <div style={{ color: 'red' }}>{passwordError}</div>}
+          {(passwordIsEmpty && passwordError) && <ErrorMessage>{passwordError}</ErrorMessage>}
           <Password onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} name='password' type="password" placeholder="Пароль" />
           <BlockOfRemember>
-            <Remember type="checkbox" />
-            <SingRemember>Запомнить</SingRemember>
+            <Remember type="checkbox" id="remember" />
+            <SingRemember for="remember">Запомнить</SingRemember>
           </BlockOfRemember>
         </BlockOfRegistation>
         <ButtonRegistration />

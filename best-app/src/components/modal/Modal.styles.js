@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import done from '../../assets/done.svg'
+
 
 export const Modal = styled.div`
   height: 100vh;
@@ -30,6 +32,12 @@ export const BlockOfRegistation = styled.div`
   height: 100px;
   margin-bottom: 25px;
 
+`
+export const ErrorMessage = styled.div`
+  color: #E5261E;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin-bottom: 3px;
 `
 
 export const BlockOfRemember = styled.div`
@@ -74,14 +82,36 @@ border-bottom: 1px solid #333;
 }
 `
 export const Remember = styled.input`
-  font-family: Sans-serfif;
-  font-weight: 500;
-  font-size: 28px;
-  color: #333;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
++label::before{
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 75%;
+}
+:checked+label::before {
+    border-color: #333;
+    background-image: url(${done});
+}
+
+
 `
 
-export const SingRemember = styled.h4`
-  font-family: Roboto;
+export const SingRemember = styled.label`
+  margin-top: 20px;
+  font-family: Sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #333;

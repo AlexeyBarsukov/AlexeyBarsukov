@@ -5,66 +5,66 @@ import x2 from '../../assets/x2.svg'
 import rbk from '../../assets/rbk.svg'
 import footerLogo from '../../assets/footerLogo.svg'
 import amedia from '../../assets/amedia.svg'
+import { LogoVideoService, SearchBox, SignVideoService, WrapperHeader } from "../Header/Header.styles"
+import { SearchInput } from "../Header/InputSearch/InputSearch.styles"
+// import { Button } from "../Header/button/Button"
+import { ButtonRegistration } from "../ButtonRegistration/ButtonRegistration"
+import ModalWindow from "../modal/Modal"
+import Logo from '../../assets/logo.svg'
+import { useState } from "react"
+import Menu from "../Menu/Menu"
+import JSONDATA from '../../MOCK_DATA.json';
+import { Button } from "../Header/button/Button"
+
+
 
 export const Tv = () => {
+  const [active, setActive] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <div>
-      <App />
+      <WrapperHeader>
+        <LogoVideoService>
+          <img src={Logo} alt="Logo" />
+          <SignVideoService>Видеосервис</SignVideoService>
+        </LogoVideoService>
+        <SearchBox>
+          <SearchInput type="text" placeholder='Поиск...' onChange={(event) => { setSearchTerm(event.target.value) }} />
+          <Button />
+        </SearchBox>
+        <ButtonRegistration onClick={setActive.bind(null, !active)} />
+        {active &&
+          <ModalWindow onClick={setActive.bind(null, false)} />
+        }
+      </WrapperHeader >
+      <Menu />
       <WrapperTv>
-        <Channel>
-          <WrapperChannelContainer>
-            <FirstBlock>
-              <img src={one} alt="Первый канал" />
-            </FirstBlock>
-            <div>
-              <NameOfChannel>Первый канал</NameOfChannel>
-              <p style={{ color: 'red' }}>13:00   Новости(с субтитрами)</p>
-              <p>14:00   Давай поженимся</p>
-              <p>15:00   Другие новости</p>
-            </div>
-          </WrapperChannelContainer>
-        </Channel>
+        {JSONDATA.filter((val) => {
+          if (searchTerm == '') {
+            return val
+          } else if (val.NameChannel.toLowerCase().includes(searchTerm.toLowerCase())) {
+            return val
+          }
 
-        <Channel>
-          <WrapperChannelContainer>
-            <FirstBlock>
-              <img src={x2} alt="x2" />
-            </FirstBlock>
-            <div>
-              <NameOfChannel>Первый канал</NameOfChannel>
-              <p style={{ color: 'red' }}>13:00 МУЛЬТ ТВ. Сезон 4, 7 серия</p>
-              <p>14:00  ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
-              <p>15:00   БУРДАШЕВ. Сезон 1, 20 серия</p>
-            </div>
-          </WrapperChannelContainer>
-        </Channel>
-
-        <Channel>
-          <WrapperChannelContainer>
-            <FirstBlock>
-              <img src={rbk} alt="РБК" />
-            </FirstBlock>
-            <div>
-              <NameOfChannel>РБК</NameOfChannel>
-              <p style={{ color: 'red' }}>13:00  ДЕНЬ. Горючая смесь: как</p>
-              <p>14:00   ДЕНЬ. Главные темы</p>
-              <p>15:00  Главные новости</p>
-            </div>
-          </WrapperChannelContainer>
-        </Channel>
-        <Channel>
-          <WrapperChannelContainer>
-            <FirstBlock>
-              <img src={amedia} alt="Амедиа премиум" />
-            </FirstBlock>
-            <div>
-              <NameOfChannel>AMEDIA PREMIUM</NameOfChannel>
-              <p style={{ color: 'red' }}>13:00   Клиент всегда мёртв </p>
-              <p>14:00  Голодные игры: Сойка-пересмешница. Часть I </p>
-              <p>15:00  Секс в большом городе</p>
-            </div>
-          </WrapperChannelContainer>
-        </Channel>
+        }).map((val, key) => {
+          return (
+            <Channel key={key}>
+              <WrapperChannelContainer>
+                <FirstBlock>
+                  <img src={require(`../../assets/${val.PhotoChannel}.svg`)} alt="Первый канал" />
+                </FirstBlock>
+                <div>
+                  <NameOfChannel>{val.NameChannel}</NameOfChannel>
+                  <p style={{ color: 'red' }}>{val.NameP1}</p>
+                  <p>{val.NameP2}</p>
+                  <p>{val.NameP3}</p>
+                </div>
+              </WrapperChannelContainer>
+            </Channel>
+          )
+        })
+        }
       </WrapperTv >
       <Footer>
         <WrapperOfFooter>
@@ -75,7 +75,6 @@ export const Tv = () => {
             <FooterText><LinkCss href="#">htc-cs.ru</LinkCss></FooterText>
           </DivFooter>
         </WrapperOfFooter>
-        {/* <SecondBlock /> */}
       </Footer>
     </div >
   )

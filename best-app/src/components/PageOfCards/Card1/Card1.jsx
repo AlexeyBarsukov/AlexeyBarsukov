@@ -4,12 +4,16 @@ import arrow from '../../../assets/arrow.svg'
 import cartoon from '../../../assets/cartoon.svg'
 // import { useNavigate } from "react-router-dom";
 import React, { createElement, useEffect, useState } from "react";
-import { DivFooter, Footer } from "../../TV/Tv.styles";
+import { DivFooter, Footer, FooterText, ImgLogoFooter, LinkCss, WrapperOfFooter } from "../../TV/Tv.styles";
+import footerLogo from '../../../assets/footerLogo.svg';
+import { useNavigate } from "react-router";
+
+
 
 function Card1() {
 
-  // let navigate = useNavigate();
-  // navigate('/movies');
+
+
 
   const refInput = React.createRef();
   const [comment, setComment] = useState([])
@@ -22,12 +26,19 @@ function Card1() {
   }
 
 
+  let history = useNavigate();
+
+  function handleClick() {
+    history(-1);
+  }
+
+
   return (
     <>
       <Header />
       <WrapperAbout>
         <ImgBlock >
-          <ImageArrow src={arrow} alt="return back" onClick={null} />
+          <ImageArrow src={arrow} alt="return back" onClick={handleClick} />
           <img src={cartoon} alt="cartoon" id='1' />
         </ImgBlock>
 
@@ -56,8 +67,6 @@ function Card1() {
           <InputBlock>
             <InputComment type="text" ref={refInput} placeholder='Введите комментарий...' />
           </InputBlock>
-
-
           <ul>
             {comment.map((item) => <YourComment>Анонимный комментарий:<MyComment>{item}</MyComment> </YourComment>)}
           </ul>
@@ -67,9 +76,14 @@ function Card1() {
         </PublishBlock>
       </MainWrapperComment>
       <Footer>
-        <DivFooter>
-          sddfsdf
-        </DivFooter>
+        <WrapperOfFooter>
+          <ImgLogoFooter src={footerLogo} alt="" />
+          <DivFooter>
+            <FooterText>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</FooterText>
+            <FooterText>+7 (3412) 93-88-61, 43-29-29</FooterText>
+            <FooterText><LinkCss href="#">htc-cs.ru</LinkCss></FooterText>
+          </DivFooter>
+        </WrapperOfFooter>
       </Footer>
     </>
   )

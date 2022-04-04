@@ -5,6 +5,8 @@ import hollywood from '../../../assets/hollywood.svg'
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
+import footerLogo from '../../../assets/footerLogo.svg';
+import { DivFooter, Footer, FooterText, ImgLogoFooter, LinkCss, WrapperOfFooter } from "../../TV/Tv.styles";
 
 
 export const Card3 = () => {
@@ -20,7 +22,11 @@ export const Card3 = () => {
     setComment(comments)
     refInput.current.value = '';
   }
+  let history = useNavigate();
 
+  function handleClick() {
+    history(-1);
+  }
 
 
 
@@ -29,7 +35,7 @@ export const Card3 = () => {
       <Header />
       <WrapperAbout>
         <ImgBlock>
-          <ImageArrow src={arrow} alt="return back" onClick={null} />
+          <ImageArrow src={arrow} alt="return back" onClick={handleClick} />
           <img src={hollywood} alt="hollywood" id="3" />
         </ImgBlock>
 
@@ -66,7 +72,16 @@ export const Card3 = () => {
           <PublishBtn onClick={addComment}>Опубликовать</PublishBtn>
         </PublishBlock>
       </MainWrapperComment>
-
+      <Footer>
+        <WrapperOfFooter>
+          <ImgLogoFooter src={footerLogo} alt="" />
+          <DivFooter>
+            <FooterText>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</FooterText>
+            <FooterText>+7 (3412) 93-88-61, 43-29-29</FooterText>
+            <FooterText><LinkCss href="#">htc-cs.ru</LinkCss></FooterText>
+          </DivFooter>
+        </WrapperOfFooter>
+      </Footer>
     </>
   )
 };

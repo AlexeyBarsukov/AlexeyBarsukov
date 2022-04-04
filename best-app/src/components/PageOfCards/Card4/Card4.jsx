@@ -4,11 +4,11 @@ import arrow from '../../../assets/arrow.svg'
 import girls from '../../../assets/girls.svg'
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
+import footerLogo from '../../../assets/footerLogo.svg';
+import { DivFooter, Footer, FooterText, ImgLogoFooter, LinkCss, WrapperOfFooter } from "../../TV/Tv.styles";
 
 
 export const Card4 = () => {
-  // let navigate = useNavigate();
-  // navigate('/movies')
 
   const refInput = React.createRef();
   const [comment, setComment] = useState([])
@@ -20,12 +20,19 @@ export const Card4 = () => {
     refInput.current.value = '';
   }
 
+  let history = useNavigate();
+
+  function handleClick() {
+    history(-1);
+  }
+
+
   return (
     <>
       <Header />
       <WrapperAbout>
         <ImgBlock>
-          <ImageArrow src={arrow} alt="return back" onClick={null} />
+          <ImageArrow src={arrow} alt="return back" onClick={handleClick} />
           <img src={girls} alt="girls" id="4" />
         </ImgBlock>
 
@@ -62,7 +69,16 @@ export const Card4 = () => {
           <PublishBtn onClick={addComment}>Опубликовать</PublishBtn>
         </PublishBlock>
       </MainWrapperComment>
-
+      <Footer>
+        <WrapperOfFooter>
+          <ImgLogoFooter src={footerLogo} alt="" />
+          <DivFooter>
+            <FooterText>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</FooterText>
+            <FooterText>+7 (3412) 93-88-61, 43-29-29</FooterText>
+            <FooterText><LinkCss href="#">htc-cs.ru</LinkCss></FooterText>
+          </DivFooter>
+        </WrapperOfFooter>
+      </Footer>
     </>
   )
 };

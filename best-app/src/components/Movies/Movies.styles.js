@@ -19,17 +19,88 @@ export const HeaderNew = styled.div`
   font-size: 20px;
 `
 
+export const MainBlockOfCards = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+
+`
 
 export const WrapperCards = styled.div`
   display: flex;
-  justify-content: space-between;
+  min-width: 100%;
+  min-height: 200px;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar{
+    height: 7px;  
+    background-color: rgba(207, 207, 207, 1);
+    border-radius: 2px;
+}
+
+&::-webkit-scrollbar-thumb {
+  background: linear-gradient(#F2994A,#EB5757);
+  border-radius: 2px;
+  &:hover{
+    background: linear-gradient(#56CCF2,#2F80ED);
+  }
+}
 `
 
 export const Card = styled.div`
+
   cursor: pointer;
-  &:hover{
-    opacity: 0.7;
+  margin-bottom: 20px;
+  min-width: 294px;
+  margin-right: 20px;
+li{
+    position: relative;
+    border-radius: 8px;
+    display: inline-block;
+    overflow: hidden;
+    
+
+}
+  p{
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    color: #f2f2f2;
+    font-family: sans-serif;
+    font-weight: 400;
+    margin: 15px;
+  }
+ 
+  
+li > div.effect-to-right {
+    width: 100%;
+    height: 99%;
+    border-radius: 8px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+li:hover > div.effect-to-right {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+
+}
+
+li div.effect-to-right {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Фон блока при наведении */
+  transition: all 0.4s ease-in-out;
+  color: #fff;
+  transform: translate(-250px, 0px) rotate(0deg); /* Направление выезжающей панели */
+}
+
+li:hover div.effect-to-right {
+  opacity: 1;
+  transform: translate(0px, 0px) rotate(0deg);
 }
 `
 

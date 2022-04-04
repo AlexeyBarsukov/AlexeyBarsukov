@@ -1,7 +1,6 @@
 import { useMemo } from "react";
-import { Movies } from "../Movies/Movies";
 import { Tv } from '../TV/Tv'
-
+import { Movies } from "../Movies/Movies";
 const toogleMenu = {
   movies: Movies,
   tv: Tv
