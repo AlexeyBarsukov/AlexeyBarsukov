@@ -1,17 +1,22 @@
-import Header from "../../Header/Header"
+import { LogoVideoService, SearchBox, SignVideoService, WrapperHeader } from "../../Header/Header.styles"
 import { AboutMovie, BlockAboutMovie, BlockCategories, BlockNamesMovies, WrapperBlocks, WrapperAbout, Comedy, CountryMovies, GenreMovie, ImgBlock, NameMovie, SignCountry, SignOne, BlockOfComments, Comment, CommentsBlock, PublishBlock, WrappersOfComments, InputComment, InputBlock, PublishBtn, ImageArrow, MyComment, WrapperMyComment, MainWrapperComment, YourComment, Li } from "../PageOfCards.styles"
 import arrow from '../../../assets/arrow.svg'
 import cartoon from '../../../assets/cartoon.svg'
-// import { useNavigate } from "react-router-dom";
 import React, { createElement, useEffect, useState } from "react";
 import { DivFooter, Footer, FooterText, ImgLogoFooter, LinkCss, WrapperOfFooter } from "../../TV/Tv.styles";
 import footerLogo from '../../../assets/footerLogo.svg';
 import { useNavigate } from "react-router";
+import { SearchInput } from "../../Header/InputSearch/InputSearch.styles";
+import { Button } from "../../Header/button/Button";
+import { ButtonRegistration } from "../../ButtonRegistration/ButtonRegistration";
+import Logo from '../../../assets/logo.svg'
+import ModalWindow from "../../modal/Modal";
 
 
 
 function Card1() {
 
+  const [active, setActive] = useState(false);
 
 
 
@@ -35,7 +40,20 @@ function Card1() {
 
   return (
     <>
-      <Header />
+      <WrapperHeader>
+        <LogoVideoService>
+          <img src={Logo} alt="Logo" />
+          <SignVideoService>Видеосервис</SignVideoService>
+        </LogoVideoService>
+        <SearchBox>
+          <SearchInput type="text" placeholder='Поиск...' />
+          <Button />
+        </SearchBox>
+        <ButtonRegistration onClick={setActive.bind(null, !active)} />
+        {active &&
+          <ModalWindow onClick={setActive.bind(null, false)} />
+        }
+      </WrapperHeader >
       <WrapperAbout>
         <ImgBlock >
           <ImageArrow src={arrow} alt="return back" onClick={handleClick} />

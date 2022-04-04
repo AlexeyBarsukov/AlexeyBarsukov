@@ -62,16 +62,20 @@ export const Movies = () => {
             }).map((val, key) => {
               return (
                 <Card key={key}>
+                  <StyledNavLink to={val.Path}>
+                    <li>
 
-                  <li>
-                    <StyledNavLink to={val.Path}>
                       <img src={require(`../../assets/${val.Photo}.svg`)} />
-                    </StyledNavLink>
-                    <div class="effect-to-right">
-                      <p>{val.DescriptionP}</p>
-                    </div>
-                  </li>
 
+                      <div class="effect-to-right">
+
+
+                        <p>{val.DescriptionP}</p>
+
+                      </div>
+
+                    </li>
+                  </StyledNavLink>
                   <DecriptionCard>{val.TitleMovie}</DecriptionCard>
                 </Card>
               )

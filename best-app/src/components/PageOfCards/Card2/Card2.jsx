@@ -6,11 +6,16 @@ import { useNavigate } from "react-router-dom"
 import React, { useState } from "react"
 import footerLogo from '../../../assets/footerLogo.svg';
 import { DivFooter, Footer, FooterText, ImgLogoFooter, LinkCss, WrapperOfFooter } from "../../TV/Tv.styles"
+import { LogoVideoService, SearchBox, SignVideoService, WrapperHeader } from "../../Header/Header.styles"
+import { SearchInput } from "../../Header/InputSearch/InputSearch.styles"
+import { Button } from "../../Header/button/Button"
+import { ButtonRegistration } from "../../ButtonRegistration/ButtonRegistration"
+import ModalWindow from "../../modal/Modal"
+import Logo from '../../../assets/logo.svg'
 
 
 export const Card2 = () => {
-  // let navigate = useNavigate();
-  // navigate('/movies')
+  const [active, setActive] = useState(false);
 
   const refInput = React.createRef();
   const [comment, setComment] = useState([])
@@ -31,7 +36,20 @@ export const Card2 = () => {
 
   return (
     <>
-      <Header />
+      <WrapperHeader>
+        <LogoVideoService>
+          <img src={Logo} alt="Logo" />
+          <SignVideoService>Видеосервис</SignVideoService>
+        </LogoVideoService>
+        <SearchBox>
+          <SearchInput type="text" placeholder='Поиск...' />
+          <Button />
+        </SearchBox>
+        <ButtonRegistration onClick={setActive.bind(null, !active)} />
+        {active &&
+          <ModalWindow onClick={setActive.bind(null, false)} />
+        }
+      </WrapperHeader >
       <WrapperAbout>
         <ImgBlock>
           <ImageArrow src={arrow} alt="return back" onClick={handleClick} />
