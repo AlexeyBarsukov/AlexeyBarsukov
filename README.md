@@ -16,3 +16,8 @@
 ![Vue](https://img.shields.io/badge/-Vue-black?style=for-the-badge&logo=vue.js)
 ![Jira](https://img.shields.io/badge/-Jira-black?style=for-the-badge&logo=Jira&logoColor=blue)
 ![Confluence](https://img.shields.io/badge/-Confluence-black?style=for-the-badge&logo=Confluence&logoColor=blue)
+
+## for communication
+
+![Telegramm](https://img.shields.io/badge/-Telegram-black?style=for-the-badge&logo=telegram)(https://t.me/KZN_Aleksei_Barsukov1)
+![vk](https://img.shields.io/badge/-vk-black?style=for-the-badge&logo=vk&logoColor=blue)(https://vk.com/frontend_alex_developer)
