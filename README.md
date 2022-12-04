@@ -17,6 +17,14 @@
 ![Jira](https://img.shields.io/badge/-Jira-black?style=for-the-badge&logo=Jira&logoColor=blue)
 ![Confluence](https://img.shields.io/badge/-Confluence-black?style=for-the-badge&logo=Confluence&logoColor=blue)
 
+## what I'm working on
+
+![Avito](https://img.shields.io/badge/-AvitoParser-black?style=for-the-badge&logo=avito)
+
+## what I'm studying
+
+![Node](https://img.shields.io/badge/-NodeJs-black?style=for-the-badge&logo=node.js)
+
 ## for communication
 
 [![Telegramm](https://img.shields.io/badge/-Telegram-black?style=for-the-badge&logo=telegram)](https://t.me/KZN_Aleksei_Barsukov1)
