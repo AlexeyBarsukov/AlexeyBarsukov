@@ -1,6 +1,5 @@
-[![Header](https://github.com/AlexeyBarsukov/AlexeyBarsukov/blob/main/assets/2022-12-04%2016.06.21.jpg?raw=true)](https://vk.com/frontend_alex_developer)
 
-## I'm a Front-end developer
+## Front-end developer
 
 ## Languages and Tools
 
