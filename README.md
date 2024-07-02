@@ -18,7 +18,7 @@
 
 ## what I'm working on
 
-[![sys-tracking](https://gitlab.com/lesha1bars/bestapp)](https://gitlab.com/lesha1bars/bestapp)
+[![sys-tracking](https://img.shields.io/badge/lol20the%20message-8A2BE2)](https://gitlab.com/lesha1bars/bestapp)
 
 ## what I'm studying
 
