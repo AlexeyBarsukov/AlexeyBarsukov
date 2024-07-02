@@ -18,7 +18,7 @@
 
 ## what I'm working on
 
-![Avito](https://img.shields.io/badge/-AvitoParser-black?style=for-the-badge&logo=avito)
+![sys-tracking](https://gitlab.com/lesha1bars/bestapp)
 
 ## what I'm studying
 
