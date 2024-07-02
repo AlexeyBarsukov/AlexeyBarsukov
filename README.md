@@ -18,7 +18,7 @@
 
 ## what I'm working on CLICK on STAR for Watching the project
 
-[![GitLab](https://img.shields.io/badge/logo-gitlab-blue?logo=gitlab)](https://gitlab.com/lesha1bars/bestapp)
+[![GitLab](https://img.shields.io/badge/logo-gitlab-blue?logo=myProjectInProgress)](https://gitlab.com/lesha1bars/bestapp)
 
 ## what I'm studying
 
