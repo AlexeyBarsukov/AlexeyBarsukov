@@ -16,9 +16,9 @@
 ![Jira](https://img.shields.io/badge/-Jira-black?style=for-the-badge&logo=Jira&logoColor=blue)
 ![Confluence](https://img.shields.io/badge/-Confluence-black?style=for-the-badge&logo=Confluence&logoColor=blue)
 
-## what I'm working on
+## what I'm working on CLICK on STAR for Watching the project
 
-[![sys-tracking](https://img.shields.io/system-trackingCLICK-HERE/-8A2BE2)](https://gitlab.com/lesha1bars/bestapp)
+[![GitLab Stars](https://img.shields.io/gitlab/stars/:project)](https://gitlab.com/lesha1bars/bestapp)
 
 ## what I'm studying
 
