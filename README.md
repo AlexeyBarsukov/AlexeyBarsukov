@@ -16,7 +16,7 @@
 ![Jira](https://img.shields.io/badge/-Jira-black?style=for-the-badge&logo=Jira&logoColor=blue)
 ![Confluence](https://img.shields.io/badge/-Confluence-black?style=for-the-badge&logo=Confluence&logoColor=blue)
 
-## what I'm working on CLICK on STAR for Watching the project
+## what I'm working on CLICK ON GITLAB LOGO for watching the project
 
 [![GitLab](https://img.shields.io/badge/logo-gitlab-blue?logo=gitlab)](https://gitlab.com/lesha1bars/bestapp)
 
