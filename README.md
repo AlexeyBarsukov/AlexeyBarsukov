@@ -18,7 +18,7 @@
 
 ## what I'm working on
 
-![sys-tracking](https://gitlab.com/lesha1bars/bestapp)
+[![sys-tracking](https://gitlab.com/lesha1bars/bestapp)](https://gitlab.com/lesha1bars/bestapp)
 
 ## what I'm studying
 
