@@ -18,7 +18,7 @@
 
 ## what I'm working on CLICK on STAR for Watching the project
 
-[![GitLab Stars](https://img.shields.io/gitlab/stars/:project)](https://gitlab.com/lesha1bars/bestapp)
+[![GitLab Stars](https://img.shields.io/gitlab/stars/)](https://gitlab.com/lesha1bars/bestapp)
 
 ## what I'm studying
 
