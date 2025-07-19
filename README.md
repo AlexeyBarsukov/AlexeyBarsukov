@@ -1,7 +1,7 @@
 
-## Front-end developer
+## Front-end разработчик
 
-## Languages and Tools
+## Языки и инструменты:
 
 ![HTML](https://img.shields.io/badge/-HTML-black?style=for-the-badge&logo=)
 ![CSS](https://img.shields.io/badge/-CSS-black?style=for-the-badge&logo=css)
@@ -16,15 +16,7 @@
 ![Jira](https://img.shields.io/badge/-Jira-black?style=for-the-badge&logo=Jira&logoColor=blue)
 ![Confluence](https://img.shields.io/badge/-Confluence-black?style=for-the-badge&logo=Confluence&logoColor=blue)
 
-## what I'm working on CLICK ON GITLAB LOGO for watching the project
-
-[![GitLab](https://img.shields.io/badge/logo-gitlab-blue?logo=gitlab)](https://gitlab.com/lesha1bars/bestapp)
-
-## what I'm studying
-
-![Node](https://img.shields.io/badge/-NodeJs-black?style=for-the-badge&logo=node.js)
-
-## for communication
+## Связаться со мной:
 
 [![Telegramm](https://img.shields.io/badge/-Telegram-black?style=for-the-badge&logo=telegram)](https://t.me/KZN_Aleksei_Barsukov1)
 [![vk](https://img.shields.io/badge/-vk-black?style=for-the-badge&logo=vk&logoColor=blue)](https://vk.com/frontend_alex_developer)
