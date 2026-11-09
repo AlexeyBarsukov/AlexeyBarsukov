@@ -64,7 +64,7 @@
 
 ### Связаться
 
-Пишите, если нужен интерфейс, который работает и нравится пользователям. Или если хочется просто поговорить о мечтах.
+Пишите, если нужен интерфейс, который работает и нравится пользователям. Или если хочется поговорить о мечтах, и это не просто так: я собираю материал для книги, и ваша история может в неё попасть.
 
 [![Telegram](https://img.shields.io/badge/-Telegram-black?style=for-the-badge&logo=telegram)](https://t.me/KZN_Aleksei_Barsukov1)
 [![VK](https://img.shields.io/badge/-VK-black?style=for-the-badge&logo=vk&logoColor=blue)](https://vk.com/frontend_alex_developer)
